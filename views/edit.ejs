@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Title</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-zinc-900 text-white">
+    <div class="lg:w-full md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col">
+        <h2 class="text-gray-900 text-lg font-medium title-font mb-5">Edit Title</h2>
+    
+        <form action="/edit" method="post">
+            <div class="relative mb-4">
+                <label for="oldTitle" class="leading-7 text-sm text-gray-600">Old Title</label>
+                <input type="text" id="oldTitle" name="old" value="<%= filename %>" disabled="true"
+                       class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+
+                <label for="newTitle" class="leading-7 text-sm text-gray-600">New Title</label>
+                <input type="text" id="newTitle" name="new"
+                       class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            </div>
+            <button type="submit" class="text-white bg-yellow-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Edit Title</button>
+        </form>
+    </div>
+</body>
+</html>
